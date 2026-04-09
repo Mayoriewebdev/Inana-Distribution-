@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inana Food Company</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="main-content">
+        <!-- navbar -->
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="images/Logo.png" alt="Logo">
+            </div>
+
+            <!-- NAV LINKS -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">My Story</a></li>
+                <li><a href="#">Become A Distributor</a></li>
+                <li><a href="#">Order Now</a></li>
+                <li><a href="#">Our Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+
+
+                <!-- HAMBURGER -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <svg viewBox="0 0 24 24">
+                        <path stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </div>
+
+            </div>
+
+        </nav>
+        <!-- end of navbar -->
+
+
+
+        <!-- <section class="distributor-section">
+  <div class="form-container">
+    <h2>Apply for<br>Distributorship</h2>
+
+    <form>
+      <div class="input-group full">
+        <input type="text" placeholder="Business Name" required>
+      </div>
+
+      <div class="input-group full">
+        <input type="text" placeholder="Location" required>
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <input type="text" placeholder="Years in Business">
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Qty. to Order">
+        </div>
+      </div>
+
+      <div class="input-group full">
+        <input type="text" placeholder="Contact Person">
+      </div>
+
+      <div class="row">
+        <div class="input-group">
+          <input type="tel" placeholder="Phone Number">
+        </div>
+        <div class="input-group">
+          <input type="email" placeholder="Email">
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+          <path d="M2 21L23 12L2 3L2 10L17 12L2 14Z"/>
+        </svg>
+        Submit Application
+      </button>
+    </form>
+
+    <div class="chat-bubble">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+        <path d="M21 15a4 4 0 01-4 4H8l-5 4V5a4 4 0 014-4h10a4 4 0 014 4z"/>
+      </svg>
+    </div>
+  </div>
+</section> -->
+
+
+
+        <section class="distributor-section">
+            <div class="form-container" data-aos="zoom-in" data-aos-duration="1000">
+
+                <!-- TITLE IMAGE -->
+                <div class="form-title" data-aos="fade-down" data-aos-delay="200">
+                    <img src="images/apply.png" alt="Apply for Distributorship">
+                </div>
+
+                <form action="#" method="POST">
+
+                    <div class="input-group full" data-aos="fade-up" data-aos-delay="300">
+                        <input type="text" placeholder="Business Name" required>
+                    </div>
+
+                    <div class="input-group full" data-aos="fade-up" data-aos-delay="400">
+                        <input type="text" placeholder="Location" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group" data-aos="fade-right" data-aos-delay="500">
+                            <input type="text" placeholder="Years in Business">
+                        </div>
+                        <div class="input-group" data-aos="fade-left" data-aos-delay="500">
+                            <input type="text" placeholder="Qty. to Order">
+                        </div>
+                    </div>
+
+                    <div class="input-group full" data-aos="fade-up" data-aos-delay="600">
+                        <input type="text" placeholder="Contact Person">
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group" data-aos="fade-right" data-aos-delay="700">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="input-group" data-aos="fade-left" data-aos-delay="700">
+                            <input type="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <!-- IMAGE BUTTON -->
+                    <button type="submit" class="submit-btn" data-aos="zoom-in-up" data-aos-delay="800">
+                        <img src="images/Submit.png" alt="Submit Application">
+                    </button>
+
+                </form>
+
+                <!-- CHAT ICON -->
+                <a href="https://wa.me/+2348137785600?text=Hello%20I%20want%20to%20apply%20for%20distributorship"
+                    class="chat-bubble" target="_blank" data-aos="fade-up" data-aos-delay="1000">
+                    <img src="images/Chat icon.png" alt="Customer Care">
+                </a>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <script>
+            function toggleMenu() {
+                document.getElementById("navLinks").classList.toggle("active");
+            }
+        </script>
+
+
+
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                easing: "ease-in-out",
+                once: true
+            });
+        </script>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000, // animation duration in ms
+                once: true,     // whether animation should happen only once - while scrolling down
+            });
+        </script>
+
+
+</body>
+
+</html>
