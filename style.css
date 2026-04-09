@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    position: relative;
+}
+
+/* LOGO */
+.logo img {
+    height: 45px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+/* ACTIVE LINK */
+.nav-links li a.active {
+    color: #e21c06;
+    font-weight: 600;
+}
+
+/* HOVER EFFECT (UNDERLINE ANIMATION) */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #e21c06;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #e21c06;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    /* bring navbar above everything */
+}
+
+
+
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger svg {
+    width: 26px;
+    height: 26px;
+}
+
+.hamburger svg {
+    width: 26px;
+    height: 26px;
+    stroke: #333;
+    /* THIS FIXES IT */
+    stroke-width: 2;
+}
+
+
+
+/* Optional hover effect */
+.hamburger svg:hover {
+    stroke: #e21c06;
+}
+
+/* ================= MOBILE ================= */
+/* ================= MOBILE ================= */
+/* MOBILE SIDEBAR WITH SHORT HEIGHT */
+/* MOBILE SIDEBAR WITH LEFT-ALIGNED TEXT */
+@media(max-width:900px) {
+
+    .nav-links {
+        position: fixed;
+        /* stay fixed */
+        top: 70px;
+        /* just below navbar */
+        right: -260px;
+        /* hidden initially */
+        height: auto;
+        /* adjust to content height */
+        min-height: 200px;
+        /* optional minimum height */
+        width: 250px;
+        /* sidebar width */
+        background: url('images/Icon.png') no-repeat center center;
+        background-size: cover;
+        border-radius: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        /* LEFT align items */
+        justify-content: flex-start;
+        padding: 20px 20px;
+        /* padding on left and right */
+        gap: 20px;
+        display: flex;
+        transition: right 0.4s ease-in-out;
+        z-index: 1050;
+    }
+
+    /* Slide in when active */
+    .nav-links.active {
+        right: 10px;
+    }
+
+    /* Links styling */
+    .nav-links li a {
+        color: #000;
+        font-weight: 600;
+        font-size: 16px;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        width: 100%;
+        /* take full sidebar width */
+        text-align: left;
+        /* align text to left */
+        padding-left: 10px;
+        /* optional small padding */
+    }
+
+    .nav-links li a.active {
+        color: #ff4500;
+    }
+
+    .nav-links li a::after {
+        background: #ff4500;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: block;
+        position: relative;
+        z-index: 1100;
+    }
+}
+
+
+
+/* EXTRA SMALL DEVICES */
+@media(max-width:500px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+
+
+/* end navbar */
+
+
+
+
+
+
+
+
+/* Scope EVERYTHING to this section only */
+.distributor-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    /* background: linear-gradient(135deg, #f5f5f5, #ffeef8); */
+}
+
+/* container with BACKGROUND IMAGE */
+.distributor-section .form-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    padding: 70px 20px 40px;
+    overflow: hidden;
+
+    background: url("images/Box.png") no-repeat center center;
+    background-size: cover;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* glow effects (kept) */
+.distributor-section .form-container::before,
+.distributor-section .form-container::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+}
+
+/* .distributor-section .form-container::before {
+  background: radial-gradient(circle, rgba(255,215,0,0.4), transparent);
+  top: -50px;
+  left: -50px;
+} */
+
+/* .distributor-section .form-container::after {
+  background: radial-gradient(circle, rgba(255,165,0,0.3), transparent);
+  bottom: -60px;
+  right: -40px;
+} */
+
+/* REMOVE TEXT TITLE */
+.distributor-section h2 {
+    display: none;
+}
+
+/* TITLE IMAGE */
+.distributor-section .form-title {
+    margin-bottom: 20px;
+}
+
+.distributor-section .form-title img {
+    width: 100%;
+    max-width: 220px;
+    display: block;
+}
+
+/* form layout */
+.distributor-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* inputs */
+.distributor-section .input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 30px;
+    border: 1px solid #e3e3e3;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.85);
+    transition: 0.3s;
+}
+
+.distributor-section .input-group input:focus {
+    border-color: #a855f7;
+    background: #fff;
+}
+
+/* row */
+.distributor-section .row {
+    display: flex;
+    gap: 10px;
+}
+
+.distributor-section .row .input-group {
+    flex: 1;
+}
+
+/* IMAGE BUTTON */
+.distributor-section .submit-btn {
+    margin-top: 20px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center; /* CENTER BUTTON */
+}
+
+.distributor-section .submit-btn img {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+}
+
+.distributor-section .submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* CHAT LINK */
+.distributor-section .chat-bubble {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    display: inline-block;
+     margin-bottom: 60px;
+    
+}
+
+.distributor-section .chat-bubble img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+
+.distributor-section .chat-bubble img:hover {
+    transform: scale(1.1);
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    .distributor-section .row {
+        flex-direction: column;
+    }
+}
